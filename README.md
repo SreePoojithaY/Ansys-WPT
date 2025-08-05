@@ -257,3 +257,18 @@ Integrate the simulation results into Simplorer (Twin Builder), creating a compl
 Tune the system for resonance and optimize efficiency using AC and transient analysis.
 
 Perform practical power efficiency calculations, showing how to achieve high efficiency under ideal simulation conditions and how to approach real-world hardware limitations.
+
+Final Changes to the design and observed results:
+Designed a 2-coil WPT system with 80 mm diameter, 6 mm thickness, and 3 turns per coil using Ansys Maxwell 3D; excited Tx coil with 5 A DC for magnetostatic analysis.
+
+Extracted self-inductance of 1.02 μH per coil and observed mutual inductance drop from 224 nH to 67 nH as spacing increased from 35 mm to 65 mm, reducing coupling coefficient from 0.22 to 0.09.
+
+Visualized magnetic field strength using B-field plots; measured maximum B = 138.32 μT at 35 mm spacing, showing strong near-field coupling and minimal stray flux.
+
+Co-simulated Maxwell field results in Simplorer (Twin Builder) with matching capacitor network (C1, C2) to tune for resonance at 6.7 MHz.
+
+Excited the system with a 320 V sinusoidal source at 6.78 MHz and conducted AC sweep and transient (TR) analysis to evaluate steady-state performance.
+
+Generated power efficiency vs frequency plot showing 99.9% peak efficiency at 6.78 MHz; maintained >90% efficiency across the 6.68–6.94 MHz bandwidth.
+
+Validated coupling behavior, power gain, and waveform stability using voltage/current probes and simulation post-processing; confirmed performance with exported inductance/coupling tables and field plots.
